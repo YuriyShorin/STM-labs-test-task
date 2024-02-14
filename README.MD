@@ -1,4 +1,4 @@
-#STM labs test task
+# STM labs test task
 
 ## Что было выполнено?
  
