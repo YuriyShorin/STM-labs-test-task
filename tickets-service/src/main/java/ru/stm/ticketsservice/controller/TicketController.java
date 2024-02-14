@@ -19,7 +19,6 @@ import ru.stm.ticketsservice.dto.ticket.TicketResponse;
 import ru.stm.ticketsservice.dto.ticket.TicketUpdateRequest;
 import ru.stm.ticketsservice.service.TicketsService;
 
-import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
@@ -43,7 +42,7 @@ public class TicketController {
                     in = ParameterIn.QUERY,
                     description = "To filter tickets by date",
                     schema = @Schema(example = "2024-05-02 22:05:00"))
-            @RequestParam(name = "date", required = false) Timestamp date,
+            @RequestParam(name = "date", required = false) String date,
             @Parameter(
                     in = ParameterIn.QUERY,
                     description = "To filter tickets by departure place",
