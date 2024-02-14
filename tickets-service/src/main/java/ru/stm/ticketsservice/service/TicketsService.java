@@ -46,12 +46,11 @@ public class TicketsService {
     @Value(value = "${spring.kafka.topic}")
     private String topic;
 
-    public List<TicketResponse> getAllAvailableTickets(Timestamp date, String departure, String arrival, String carrier, Integer page, Integer size) {
+    public List<TicketResponse> getAllAvailableTickets(String date, String departure, String arrival, String carrier, Integer page, Integer size) {
         if (size == null) {
             size = DEFAULT_PAGINATION_SIZE;
         }
-
-        List<Ticket> tickets = ticketRepository.findAllAvailableTickets(date, departure, arrival, carrier, page * size, size);
+        List<Ticket> tickets = ticketRepository.findAllAvailableTickets(Timestamp.valueOf(date), departure, arrival, carrier, page * size, size);
 
         return ticketMapper.ticketsToTicketsResponses(tickets);
     }
