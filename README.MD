@@ -19,6 +19,7 @@ Postman коллекция: https://www.postman.com/yuriyshorin/workspace/stm-la
 ## Админ
 
 login: admin@tickets.com
+
 password: U4h%JMX>vNA3_PgdK5;W[#
 
 ## Docker
